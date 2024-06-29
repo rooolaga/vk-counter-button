@@ -1,6 +1,10 @@
-.text {
+.label {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     flex: 1;
+}
+
+.loading {
+    display: none;
 }

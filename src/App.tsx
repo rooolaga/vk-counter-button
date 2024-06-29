@@ -5,25 +5,16 @@ function App() {
   return (
     <div style={{
       display: 'flex',
-      columnGap: '20px'
+      flexDirection: 'column',
+      rowGap: '20px',
+      width: '150px',
     }}>
-      <Button size='small'>
-        <Button.Text>Скажи как мне быть, если нет стимула</Button.Text>
+      <Button size='large' variant={"secondary"}>
+        <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>
         <Button.Counter />
       </Button>
-
-      <Button>
-        <Button.Text>Скажи как мне быть, если нет стимула</Button.Text>
-        <Button.Counter />
-      </Button>
-
-      <Button variant='secondary'>
-        <Button.Text>secondary</Button.Text>
-        <Button.Counter />
-      </Button>
-
-      <Button variant='secondary' size='large'>
-        <Button.Text>secondary</Button.Text>
+      <Button size='large'>
+        <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>
         <Button.Counter />
       </Button>
     </div>

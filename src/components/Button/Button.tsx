@@ -22,7 +22,9 @@ export const Button = (props: ButtonProps) => {
     state = 'enabled',
     className,
     onClick,
-    children
+    disabled,
+    children,
+    ...otherProps
   } = props;
 
   const [count, setCount] = useState(0);
@@ -45,7 +47,8 @@ export const Button = (props: ButtonProps) => {
         <button
           onClick={(e) => handleOnChange(e)}
           className={clsNames}
-          disabled={state !== 'enabled'}
+          disabled={disabled || state !== 'enabled'}
+          {...otherProps}
         >
           <span className={cls.buttonContent}>{children}</span>
           <span className={cls.loader}></span>

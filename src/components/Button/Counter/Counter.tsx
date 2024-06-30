@@ -1,8 +1,7 @@
-import { useButtonContext } from "../ButtonContext";
-
-import cls from './Counter.module.scss';
-import { clsx } from "clsx";
 import { useEffect, useRef } from "react";
+import { clsx } from "clsx";
+import { useButtonContext } from "../ButtonContext";
+import cls from './Counter.module.scss';
 
 export const Counter = () => {
   const {count, size, variant} = useButtonContext();

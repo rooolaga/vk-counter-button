@@ -68,10 +68,14 @@
         column-gap: 4px;
     }
 
-    .loader:before {
-        height: 16px;
-        width: 16px;
-        border-width: 2px;
+    .loader {
+        min-width: 16px;
+
+        &:before {
+            height: 16px;
+            width: 16px;
+            border-width: 2px;
+        }
     }
 }
 
@@ -96,10 +100,14 @@
         column-gap: 8px;
     }
 
-    .loader:before {
-        height: 24px;
-        width: 24px;
-        border-width: 3px;
+    .loader {
+        min-width: 24px;
+
+        &:before {
+            height: 24px;
+            width: 24px;
+            border-width: 3px;
+        }
     }
 }
 
@@ -139,6 +147,7 @@
     left: 50%;
     transform: translateY(50%) rotateY(-180deg);
     width: 33%;
+    min-width: 20px;
     height: 100%;
     display: flex;
     align-items: center;

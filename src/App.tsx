@@ -1,19 +1,15 @@
 import { Button } from "./components/Button/Button";
+import cls from './App.module.scss'
 
 function App() {
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      rowGap: '20px',
-      width: '150px',
-    }}>
-      <Button size='large' variant={"secondary"}>
+    <div className={cls.app}>
+      <Button size='large'>
         <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>
         <Button.Counter />
       </Button>
-      <Button size='large'>
+      <Button size='large' variant={"secondary"}>
         <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>
         <Button.Counter />
       </Button>

@@ -6,6 +6,13 @@ import cls from './Counter.module.scss';
 export const Counter = () => {
   const {count, size, variant} = useButtonContext();
   const counterRef = useRef<HTMLSpanElement | null>(null);
+  const isFirstRender = useRef(true)
+
+  const clsNames = clsx(
+    cls.counter,
+    cls[size],
+    cls[variant],
+  );
 
   const handlePulseAnimation = (duration) => {
     const pulse = document.createElement('span');
@@ -20,14 +27,13 @@ export const Counter = () => {
   }
 
   useEffect(() => {
-    handlePulseAnimation(1000);
+    if(isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    } else {
+      handlePulseAnimation(1000);
+    }
   }, [count]);
-
-  const clsNames = clsx(
-    cls.counter,
-    cls[size],
-    cls[variant],
-  )
 
   return (
     <span className={clsNames} ref={counterRef}>

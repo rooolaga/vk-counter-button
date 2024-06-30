@@ -14,10 +14,10 @@ const meta = {
       mapping: {
         Label: <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>,
         Counter: <Button.Counter/>,
-        LabeLAndCounter: <>
-          <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>
+        LabeLAndCounter: [
+          <Button.Label>Скажи как мне быть, если нет стимула</Button.Label>,
           <Button.Counter/>
-        </>,
+        ],
       },
     },
   },
